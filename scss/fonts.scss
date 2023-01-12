@@ -1,0 +1,31 @@
+// Fonts
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';
+
+@font-face {
+    font-family: 'crafterregular';
+    src: url('../fonts/crafter-regular-webfont.woff2') format('woff2'),
+         url('../fonts/crafter-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arquitectaitalic';
+    src: url('../fonts/latinotype_-_arquitecta-italic-webfont.woff2') format('woff2'),
+         url('../fonts/latinotype_-_arquitecta-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arquitectaregular';
+    src: url('../fonts/latinotype_-_arquitecta-webfont.woff2') format('woff2'),
+         url('../fonts/latinotype_-_arquitecta-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
