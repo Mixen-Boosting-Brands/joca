@@ -8,7 +8,7 @@ module.exports = {
         filename: 'app.bundle.js',
         path: path.resolve(__dirname, 'assets/js')
     },
-    mode: 'production',
+    mode: 'development',
     module: {
         rules: [
             {
@@ -22,6 +22,13 @@ module.exports = {
                 }
             }
         ]
+    },
+    devServer: {
+        static: {
+          directory: path.join(__dirname, '/'),
+        },
+        compress: true,
+        port: 7777,
     },
     plugins: [
         new webpack.ProvidePlugin({

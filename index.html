@@ -24,31 +24,40 @@
         </a>
         <div class="menu-contenido">
             <a class="anchor" id="btn-logo" href="#">
-                <img class="logo img-fluid" src="./assets/images/logo.png" alt="">
+                <img class="logo img-fluid" src="./assets/images/logo-light.png" alt="">
             </a>
             <nav>
                 <ul class="list-unstyled">
                     <li>
-                        <a class="anchor" id="btn-nav-1" href="#"></a>
+                        <a class="anchor" id="btn-nav-1" href="#">
+                            Inicio
+                        </a>
                     </li>
                     <li>
-                        <a class="anchor" id="btn-nav-2" href="#"></a>
+                        <a class="anchor" id="btn-nav-2" href="#">
+                            Nosotros
+                        </a>
                     </li>
                     <li>
-                        <a class="anchor" id="btn-nav-3" href="#"></a>
+                        <a class="anchor" id="btn-nav-3" href="#">
+                            Cotiza
+                        </a>
                     </li>
                     <li>
-                        <a class="anchor" id="btn-nav-4" href="#"></a>
+                        <a class="anchor" id="btn-nav-4" href="#">
+                            Contacto
+                        </a>
                     </li>
                     <li>
-                        <a class="anchor" id="btn-nav-5" href="#"></a>
-                    </li>
-                    <li>
-                        <a class="anchor" id="btn-nav-6" href="#"></a>
+                        <a class="anchor" id="btn-nav-5" href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
-            <a href="#" class="anchor btn btn-primary" id="btn-contacto">Contáctanos</a>
+            <a href="#" class="anchor btn btn-primary" id="btn-contacto">
+                Contáctanos
+            </a>
             <div id="social">
                 <ul class="list-inline">
                     <li class="list-inline-item">
@@ -89,12 +98,43 @@
     <header id="navbar">
         <div class="container">
             <div class="row">
-                <div class="col-4 my-auto">
+                <div class="col-4 col-lg-1 my-auto">
                     <a href="#">
-                        <img src="./assets/images/logo.png" alt="" class="logo img-fluid" id="logo-navbar">
+                        <img src="./assets/images/logo-dark.svg" alt="" class="logo img-fluid" id="logo-navbar">
                     </a>
                 </div>
-                <div class="col-8 my-auto text-end">
+                <div class="col-lg-8 my-auto d-none d-lg-block">
+                    <nav>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    Nosotros
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    Cotiza
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    Contacto
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-8 my-auto text-end d-lg-none">
                     <a id="mburger" href="javascript:void(0)">
                         <i class="fas fa-bars"></i>
                     </a>
@@ -106,16 +146,139 @@
     <section id="jumbotron">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>
-                        Alta calidad en<br>
-                        productos marinos
-                    </h1>
-                    <h2>Subtítulo</h2>
+                <div class="col col-lg-9 col-xl-8 my-auto">
+                    <div id="container-datos">
+                        <figure>
+                            <img src="./assets/images/logo-jumbotron.png" alt="" class="img-fluid" id="logo-jumbotron">
+                        </figure>
+                        <h1>
+                            Alta calidad en<br>
+                            productos marinos
+                        </h1>
+                        <p class="font-secondary fst-italic text-uppercase">Conoce nuestra amplia variedad de productos marítimos que podemos ofrecer para tu negocio.</p>
+                        <a href="#" class="btn btn-primary">Cotiza aquí</a>
+                        <img src="./assets/images/anchor.png" alt="" class="img-fluid" id="anchor">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="acerca-de">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 my-auto">
+                    <h1 id="titulo">Acerca de<br>nosotros</h1>
+                </div>
+                <div class="col-12 col-lg-6 my-auto">
+                    <p>Somos una empresa comercializadora de productos marítimos a nivel nacional. La excelencia en calidad de nuestros productos nos diferencía. Además buscamos darte siempre atención personalizada por los miembros de nuestro equipo. Con nosotros puedes estar seguro que los productos serán entregados en poco tiempo, además de contar con las medidas de higiene necesarias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuestros-productos" class="productos">
+        <div class="bg-pattern-dark"></div>
+        <div class="bg-pattern-light"></div>
+        <div class="barra-azul barra-top"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 my-auto text-end order-lg-2">
+                    <h1 class="titulo">Nuestros productos</h1>
+                </div>
+                <div class="col-12 col-lg-6 my-auto order-lg-1">
+                    <a href="#">
+                        <div class="card mb-5">
+                            <div class="row g-0">
+                                <div class="col-md-11 overflow-hidden">
+                                    <img src="./assets/images/thumb-mariscos.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mariscos</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card mb-5">
+                            <div class="row g-0">
+                                <div class="col-md-11 overflow-hidden">
+                                    <img src="./assets/images/thumb-atun.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Atún</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card mb-5">
+                            <div class="row g-0">
+                                <div class="col-md-11 overflow-hidden">
+                                    <img src="./assets/images/thumb-pescado.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pescado</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="barra-azul barra-bottom"></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 offset-lg-1 text-center order-lg-2 mb-4 mb-lg-0">
+                    <img src="./assets/images/logo-light.svg" alt="" class="img-fluid">
+                    <hr>
+                    <h3>Síguenos</h3>
+                    <ul id="social" class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 order-lg-1">
+                    <h3>Contacto</h3>
+                    <h6>Johanna Medina</h6>
+                    <p>CEO</p>
+                    <p>
+                        <a href="tel:+5548237827">55 48237 827</a>
+                    </p>
+                    <p>
+                        <a href="mailto:johanna.medina@jocamx.com">johanna.medina@jocamx.com</a>
+                    </p>
+                    <hr>
+                    <h5>Joel Macías</h5>
+                    <p>Director Comercial</p>
+                    <p>
+                        <a href="tel:+5526584228">55 2658 4228</a>
+                    </p>
+                    <p>
+                        <a href="mailto:joel.macias@jocamx.com">joel.macias@jocamx.com</a>
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->
 

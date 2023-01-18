@@ -1,13 +1,24 @@
 // Global styles
+:root {
+    --bs-body-font-size: 1.3rem !important;
+}
+
 html,
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    letter-spacing: 0rem;
 }
 
 body {
     position: relative;
     font-family: 'arquitectaregular', sans-serif;
+    color: $primary;
+}
+
+i,
+.fst-italic {
+    font-family: 'arquitectaitalic', sans-serif;
 }
 
 header,
@@ -59,9 +70,31 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.btn {
     font-family: 'crafterregular', sans-serif;
     letter-spacing: 0.1rem;
+}
+
+h1 {
+    @include font-size(4rem);
+}
+
+h2 {
+    @include font-size(3.6rem);
+}
+
+.btn {
+    --bs-btn-border-radius: 0;
+    @include font-size(1.4rem);
+}
+
+.font-primary {
+     color: $font-primary;
+}
+
+.font-secondary {
+    color: $font-secondary;
 }
 
 header#navbar {
@@ -80,6 +113,14 @@ header#navbar {
         @include transition(ease, 0.2s);
     }
 
+    nav {
+        text-transform: uppercase;
+
+        ul {
+            margin-bottom: 0;
+        }
+    }
+
     #mburger {
         // color: ;
 
@@ -91,16 +132,23 @@ header#navbar {
 }
 
 .navbar-scroll {
-    // background-color: ;
+    background-color: $primary;
+    color: $font-tertiary;
     padding: 10px 30px !important;
+    -webkit-box-shadow: 0px 0px 79px -30px rgba(94,93,94,1) !important;
+                box-shadow: 0px 0px 79px -30px rgba(94,93,94,1) !important;
     @include transition(ease, 0.3s);
+
+    a {
+        color: $font-tertiary !important;
+    }
 
     #logo-navbar {
         width: 60px !important;
     }
 
     #mburger {
-        // color: !important;
+        color: $font-tertiary !important;
     }
 }
 
@@ -114,7 +162,188 @@ header#navbar {
 }
 
 #jumbotron {
-    @include background('../images/bg-jumbotron.png', center, cover);
+    @include background('../images/bg-jumbotron.png', left center, cover);
     color: $primary;
     min-height: 100vh;
+    position: relative;
+
+    .container,
+    .row {
+        min-height: 100vh;
+    }
+
+    #container-datos {
+        position: relative;
+
+        #anchor {
+            position: absolute;
+            right: 0;
+            bottom: -70px;
+        }
+    }
+
+    #logo-jumbotron {
+        max-width: 110px;
+    }
+
+    &::after {
+        background: url('../images/after-jumbotron.png') no-repeat;
+        position: absolute;
+        right: -260px;
+        @include absolute-center-y;
+        content: '';
+        width: 384px;
+        height: 513px;
+    }
+}
+
+#acerca-de {
+    padding: 100px 0 72px;
+
+    #titulo {
+        color: $secondary;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            @include background('../images/after-acerca-de.png', center, contain);
+            position: absolute;
+            content: '';
+            right: -30px;
+            top: -30px;
+            width: 114px;
+            height: 110px;
+        }
+    }
+}
+
+.productos {
+    @include background('../images/bg-crema.png', center, cover);
+    position: relative;
+
+    .barra-azul {
+        @include background('../images/bg-azul.png', center, cover);
+        width: 100%;
+        height: 60px;
+        float: left;
+    }
+
+    .barra-top {
+        margin-bottom: 60px;
+    }
+
+    .barra-bottom {
+        margin-top: 60px;
+    }
+
+    .bg-pattern-dark {
+        @include background('../images/bg-pattern-dark.png', center, cover);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    .bg-pattern-light {
+        @include background('../images/bg-pattern-light.png', center, cover);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+#nuestros-productos {
+    .titulo {
+        position: relative;
+        z-index: 2;
+    }
+
+    .card {
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: 0px 0px 79px -30px rgba(94,93,94,1);
+                box-shadow: 0px 0px 79px -30px rgba(94,93,94,1);
+        position: relative;
+        z-index: 4;
+
+        img {
+            -webkit-transition: -webkit-transform 2s ease;
+            transition: -webkit-transform 2s ease;
+            -o-transition: transform 2s ease;
+            transition: transform 2s ease;
+            transition: transform 2s ease, -webkit-transform 2s ease;
+
+            &:hover {
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+
+        .card-body {
+            width: 100%;
+            height: 100%;
+            background-color: $primary;
+            color: $font-tertiary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .card-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &::after {
+        @include background('../images/after-productos.png', center, contain);
+        position: absolute;
+        content: '';
+        right: -100px;
+        bottom: 0;
+        width: 325px;
+        height: 325px;
+        z-index: 1;
+    }
+}
+
+footer {
+    background-color: $primary;
+    color: $font-tertiary;
+    padding: 60px 0;
+
+    p {
+        line-height: 0.8rem;
+    }
+
+    a {
+        color: $font-tertiary;
+    }
+
+    #social {
+        margin-bottom: 0;
+        
+        a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #E7EBED;
+            border-radius: 50px;
+            color: $font-tertiary;
+            @include transition(ease, 0.3s);
+
+            &:hover,
+            &:focus {
+                background-color: #E7EBED;
+                color: $primary;
+            }
+        }
+    }
 }

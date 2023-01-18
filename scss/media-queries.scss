@@ -2,25 +2,91 @@
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
-
+    #jumbotron {
+        &::after {
+            right: -280px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
+    #jumbotron {    
+        #logo-jumbotron {
+            max-width: 140px;
+        }
+    }
 
+    #nuestros-productos {
+        .card {
+            .card-body {
+                .card-title {
+                    -webkit-transform: rotate(-90deg);
+                        -ms-transform: rotate(-90deg);
+                            transform: rotate(-90deg);
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) {
+    #jumbotron {    
+        #logo-jumbotron {
+            max-width: 170px;
+        }
 
+        &::after {
+            right: -310px;
+        }
+    }
+
+    #acerca-de {
+        #titulo {
+            &::after {
+                right: -38px;
+                top: -45px;
+                width: 136px;
+                height: 132px;
+            }
+        }
+    }
+
+    #nuestros-productos {
+        &::after {
+            bottom: 60px;
+        }
+    }
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) {
+    #jumbotron {
+        &::after {
+            right: -130px;
+        }
+    }
 
+    #acerca-de {
+        #titulo {
+            &::after {
+                width: 160px;
+                height: 155px;
+            }
+        }
+    }
+
+    #nuestros-productos {
+        &::after {
+            bottom: 100px;
+        }
+    }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @include media-breakpoint-up(xxl) {
-
+    #jumbotron {
+        background-position: left;
+    }
 }
