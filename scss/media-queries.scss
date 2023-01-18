@@ -7,6 +7,15 @@
             right: -280px;
         }
     }
+
+    #nuestros-productos {
+        #sello {
+            right: 23%;
+            left: auto;
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -18,6 +27,13 @@
     }
 
     #nuestros-productos {
+        .titulo {
+            &:after {
+                right: auto;
+                left: 0;
+            }
+        }
+
         .card {
             .card-body {
                 .card-title {
@@ -25,6 +41,23 @@
                         -ms-transform: rotate(-90deg);
                             transform: rotate(-90deg);
                 }
+            }
+        }
+
+        #sello {
+            right: 20%;
+        }
+
+        &::before {
+            left: 150px;
+            right: auto;
+        }
+    }
+
+    footer {
+        nav {
+            ul {
+                line-height: 3rem;
             }
         }
     }
@@ -54,6 +87,27 @@
     }
 
     #nuestros-productos {
+        .titulo {
+            &:after {
+                right: 0;
+                left: auto;
+                bottom: 200px;
+                width: 420px;
+                height: 139px;
+            }
+        }
+
+        #sello {
+            bottom: 72px;
+            right: 14%;
+            width: 150px;
+            height: 150px;
+        }
+
+        &::before {
+            left: 350px;
+        }
+
         &::after {
             bottom: 60px;
         }
@@ -78,6 +132,25 @@
     }
 
     #nuestros-productos {
+        .titulo {
+            &:after {
+                right: -100px;
+                width: 500px;
+                height: 165px;
+            }
+        }
+
+        #sello {
+            bottom: 100px;
+            right: 8%;
+            width: 180px;
+            height: 180px;
+        }
+
+        &::before {
+            left: 450px;
+        }
+
         &::after {
             bottom: 100px;
         }
@@ -88,5 +161,11 @@
 @include media-breakpoint-up(xxl) {
     #jumbotron {
         background-position: left;
+    }
+
+    #nuestros-productos {
+        &::before {
+            left: 40%;
+        }
     }
 }

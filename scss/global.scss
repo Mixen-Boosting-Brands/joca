@@ -101,12 +101,19 @@ header#navbar {
     width: 100%;
     height: auto;
     padding: 15px 30px;
-    // color: ;
+    color: $font-primary;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
     @include transition(ease, 0.2s);
+
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
 
     #logo-navbar {
         width: 100px;
@@ -118,11 +125,15 @@ header#navbar {
 
         ul {
             margin-bottom: 0;
+
+            .list-inline-item:not(:last-child) {
+                margin-right: 1.5rem;
+            }
         }
     }
 
     #mburger {
-        // color: ;
+        color: $font-primary;
 
         &:hover,
         &:focus {
@@ -133,7 +144,7 @@ header#navbar {
 
 .navbar-scroll {
     background-color: $primary;
-    color: $font-tertiary;
+    color: $font-tertiary !important;
     padding: 10px 30px !important;
     -webkit-box-shadow: 0px 0px 79px -30px rgba(94,93,94,1) !important;
                 box-shadow: 0px 0px 79px -30px rgba(94,93,94,1) !important;
@@ -261,8 +272,20 @@ header#navbar {
 
 #nuestros-productos {
     .titulo {
+        display: inline-block;
         position: relative;
         z-index: 2;
+
+        &:after {
+            @include background('../images/decor-productos-1.png', center, contain);
+            position: absolute;
+            content: '';
+            @include absolute-center-x;
+            bottom: 10px;
+            width: 364px;
+            height: 120px;
+            z-index: 2;
+        }
     }
 
     .card {
@@ -302,6 +325,27 @@ header#navbar {
         }
     }
 
+    #sello {
+        @include background('../images/logo-jumbotron.png', center, contain);
+        position: absolute;
+        bottom: 0;
+        @include absolute-center-x;
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+    }
+
+    &::before {
+        @include background('../images/before-productos.png', center, contain);
+        position: absolute;
+        content: '';
+        @include absolute-center-x;
+        top: -70px;
+        width: 100px;
+        height: 351px;
+        z-index: 2;
+    }
+
     &::after {
         @include background('../images/after-productos.png', center, contain);
         position: absolute;
@@ -325,6 +369,12 @@ footer {
 
     a {
         color: $font-tertiary;
+
+        &:hover,
+        &:focus {
+            color: $font-tertiary;
+            text-decoration: underline;
+        }
     }
 
     #social {
@@ -345,7 +395,14 @@ footer {
             &:focus {
                 background-color: #E7EBED;
                 color: $primary;
+                text-decoration: none;
             }
+        }
+    }
+
+    nav {
+        ul {
+            margin-bottom: 0;
         }
     }
 }

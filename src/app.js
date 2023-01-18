@@ -16,8 +16,10 @@ $(function () {
 
         if (scroll >= 1) {
             header.addClass('navbar-scroll');
+            document.getElementById("logo-navbar").src="./assets/images/logo-light.svg";
         } else {
             header.removeClass("navbar-scroll");
+            document.getElementById("logo-navbar").src="./assets/images/logo-dark.svg";
         }
     }
 
