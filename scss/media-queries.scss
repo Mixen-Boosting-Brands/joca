@@ -8,7 +8,7 @@
         }
     }
 
-    #nuestros-productos {
+    .productos {
         #sello {
             right: 23%;
             left: auto;
@@ -23,6 +23,12 @@
     #jumbotron {    
         #logo-jumbotron {
             max-width: 140px;
+        }
+    }
+
+    .productos {
+        #sello {
+            right: 20%;
         }
     }
 
@@ -44,13 +50,16 @@
             }
         }
 
-        #sello {
-            right: 20%;
-        }
-
         &::before {
             left: 150px;
             right: auto;
+        }
+    }
+
+    #productos-listado {
+        &::before {
+            right: 150px;
+            left: auto;
         }
     }
 
@@ -86,6 +95,15 @@
         }
     }
 
+    .productos {
+        #sello {
+            bottom: 72px;
+            right: 14%;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
     #nuestros-productos {
         .titulo {
             &:after {
@@ -97,19 +115,18 @@
             }
         }
 
-        #sello {
-            bottom: 72px;
-            right: 14%;
-            width: 150px;
-            height: 150px;
-        }
-
         &::before {
             left: 350px;
         }
 
         &::after {
             bottom: 60px;
+        }
+    }
+
+    #nproductos-listado {
+        &::before {
+            right: 350px;
         }
     }
 }
@@ -131,6 +148,15 @@
         }
     }
 
+    .productos {
+        #sello {
+            bottom: 100px;
+            right: 8%;
+            width: 180px;
+            height: 180px;
+        }
+    }
+
     #nuestros-productos {
         .titulo {
             &:after {
@@ -140,19 +166,18 @@
             }
         }
 
-        #sello {
-            bottom: 100px;
-            right: 8%;
-            width: 180px;
-            height: 180px;
-        }
-
         &::before {
             left: 450px;
         }
 
         &::after {
             bottom: 100px;
+        }
+    }
+
+    #productos-listado {
+        &::before {
+            right: 20%;
         }
     }
 }
@@ -166,6 +191,12 @@
     #nuestros-productos {
         &::before {
             left: 40%;
+        }
+    }
+
+    #productos-listado {
+        &::before {
+            right: 15%;
         }
     }
 }
