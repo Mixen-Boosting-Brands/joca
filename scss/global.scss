@@ -237,7 +237,8 @@ header#navbar {
     }
 }
 
-.productos {
+.productos,
+.contenido-modal {
     @include background('../images/bg-crema.png', center, cover);
     position: relative;
 
@@ -308,7 +309,7 @@ header#navbar {
     }
 
     .card {
-        border: 0;
+        border: none;
         border-radius: 0;
         -webkit-box-shadow: 0px 0px 79px -30px rgba(94,93,94,1);
                 box-shadow: 0px 0px 79px -30px rgba(94,93,94,1);
@@ -408,6 +409,40 @@ header#navbar {
         width: 100px;
         height: 351px;
         z-index: 2;
+    }
+}
+
+#modal-cotizador {
+    .modal-content {
+        border: none;
+        border-radius: 0;
+    }
+
+    .modal-header,
+    .modal-body {
+        @include background('../images/bg-azul.png', center, cover);
+    }
+
+    .modal-header {
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .modal-body {
+        padding: 30px;
+
+        .contenido-modal {
+            -webkit-box-shadow: 5px 5px 15px 0px #666;
+                    box-shadow: 5px 5px 15px 0px #666;
+            padding: 30px;
+
+            .titulo,
+            p {
+                position: relative;
+                z-index: 2;
+            }
+        }
     }
 }
 

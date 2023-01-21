@@ -146,7 +146,7 @@
                             productos marinos
                         </h1>
                         <p class="font-secondary fst-italic text-uppercase">Conoce nuestra amplia variedad de productos marítimos que podemos ofrecer para tu negocio.</p>
-                        <a href="#" class="btn btn-primary">Cotiza aquí</a>
+                        <a href="javascript:void(0)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-cotizador">Cotiza aquí</a>
                         <img src="./assets/images/anchor.png" alt="" class="img-fluid" id="anchor">
                     </div>
                 </div>
@@ -315,6 +315,44 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="modal-cotizador" tabindex="-1" aria-labelledby="modal-cotizador" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row mb-4">
+                            <div class="col text-center">
+                                <div class="contenido-modal">
+                                    <div class="bg-pattern-dark"></div>
+                                    <div class="bg-pattern-light"></div>
+                                    <div class="row">
+                                        <div class="col-lg-10 offset-lg-1">
+                                            <h2 class="titulo">¡Te cotizamos con gusto!</h2>
+                                            <p class="font-secondary fst-italic text-uppercase">Completa la siguiente información y nos contactaremos contigo para compartir tu cotización.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8 offset-lg-2">
+                                            <h3 class="titulo">Producto a cotizar</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="./assets/images/logo-dark.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->
 
