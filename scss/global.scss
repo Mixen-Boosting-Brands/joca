@@ -416,6 +416,7 @@ header#navbar {
     .modal-content {
         border: none;
         border-radius: 0;
+        overflow: hidden;
     }
 
     .modal-header,
@@ -436,11 +437,28 @@ header#navbar {
             -webkit-box-shadow: 5px 5px 15px 0px #666;
                     box-shadow: 5px 5px 15px 0px #666;
             padding: 30px;
+            position: relative;
 
             .titulo,
             p {
                 position: relative;
                 z-index: 2;
+            }
+
+            form {
+                position: relative;
+                z-index: 4;
+
+                h3,
+                p {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                .form-floating > .form-select {
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                }
             }
         }
     }

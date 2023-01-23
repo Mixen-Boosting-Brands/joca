@@ -124,9 +124,37 @@
         }
     }
 
-    #nproductos-listado {
+    #productos-listado {
         &::before {
             right: 350px;
+        }
+    }
+
+    #modal-cotizador {
+        .modal-body {
+            .contenido-modal {
+                &:before {
+                    @include background('../images/before-productos.png', center, contain);
+                    position: absolute;
+                    bottom: -100px;
+                    left: 30px;
+                    width: 58px;
+                    height: 200px;
+                    z-index: 2;
+                    content: '';
+                }
+    
+                &:after {
+                    @include background('../images/logo-jumbotron.png', center, contain);
+                    position: absolute;
+                    bottom: -100px;
+                    right: -100px;
+                    width: 200px;
+                    height: 200px;
+                    z-index: 2;
+                    content: '';
+                }
+            }
         }
     }
 }

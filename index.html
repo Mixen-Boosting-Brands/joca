@@ -332,12 +332,128 @@
                                     <div class="row">
                                         <div class="col-lg-10 offset-lg-1">
                                             <h2 class="titulo">¡Te cotizamos con gusto!</h2>
-                                            <p class="font-secondary fst-italic text-uppercase">Completa la siguiente información y nos contactaremos contigo para compartir tu cotización.</p>
+                                            <p class="font-secondary fst-italic text-uppercase mb-4">Completa la siguiente información y nos contactaremos contigo para compartir tu cotización.</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-8 offset-lg-2">
-                                            <h3 class="titulo">Producto a cotizar</h3>
+                                            <!-- Aquí se inyecta feedback a usuario vía Ajax -->
+                                            <div id="form-messages"></div>
+                                            <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
+                                            <form data-aos="fade-up" data-aos-duration="1000" action="mailer-tup.php" method="POST" class="row g-3 needs-validation contact-form mb-4 mb-lg-0" id="ajax-contact" novalidate>
+                                                <h3>Producto a cotizar</h3>
+                                                <div class="col-md-12 form-floating">
+                                                    <select class="form-select form-select-lg mb-3" id="producto" name="producto" aria-label=".form-select-lg" required>
+                                                        <option selected disabled>Producto a cotizar*</option>
+                                                        <option value="1">Mariscos</option>
+                                                        <option value="2">Mariscos</option>
+                                                        <option value="3">Mariscos</option>
+                                                    </select>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor selecciona el producto que desees obtener una cotización.
+                                                    </div>
+                                                </div>
+                                                <h3>Gramaje</h3>
+                                                <p class="font-secondary fst-italic text-uppercase">Coloca aquí la cantidad de producto que deseas cotizar.</p>
+                                                <div class="col-md-12 form-floating mb-4">
+                                                    <textarea class="form-control shadow-none" id="gramaje" name="gramaje" placeholder="Gramaje*" style="height: 100px;" required></textarea>
+                                                    <label for="gramaje">Gramaje*</label>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor introduce el gramaje.
+                                                    </div>
+                                                </div>
+                                                <h3>Dirección de envío</h3>
+                                                <div class="col-md-12 form-floating mb-4">
+                                                    <textarea class="form-control shadow-none" id="direccion" name="direccion" placeholder="Calle y número*" style="height: 100px;" required></textarea>
+                                                    <label for="direccion">Calle y número*</label>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor introduce tu calle y número.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 form-floating">
+                                                    <select class="form-select form-select-lg mb-3" id="estado" name="estado" aria-label=".form-select-lg" required>
+                                                        <option selected disabled>Estado*</option>
+                                                        <option value="Aguascalientes">Aguascalientes</option>
+                                                        <option value="Baja California">Baja California</option>
+                                                        <option value="Baja California Sur">Baja California Sur</option>
+                                                        <option value="Campeche">Campeche</option>
+                                                        <option value="Chiapas">Chiapas</option>
+                                                        <option value="Chihuahua">Chihuahua</option>
+                                                        <option value="CDMX">Ciudad de México</option>
+                                                        <option value="Coahuila">Coahuila</option>
+                                                        <option value="Colima">Colima</option>
+                                                        <option value="Durango">Durango</option>
+                                                        <option value="Estado de México">Estado de México</option>
+                                                        <option value="Guanajuato">Guanajuato</option>
+                                                        <option value="Guerrero">Guerrero</option>
+                                                        <option value="Hidalgo">Hidalgo</option>
+                                                        <option value="Jalisco">Jalisco</option>
+                                                        <option value="Michoacán">Michoacán</option>
+                                                        <option value="Morelos">Morelos</option>
+                                                        <option value="Nayarit">Nayarit</option>
+                                                        <option value="Nuevo León">Nuevo León</option>
+                                                        <option value="Oaxaca">Oaxaca</option>
+                                                        <option value="Puebla">Puebla</option>
+                                                        <option value="Querétaro">Querétaro</option>
+                                                        <option value="Quintana Roo">Quintana Roo</option>
+                                                        <option value="San Luis Potosí">San Luis Potosí</option>
+                                                        <option value="Sinaloa">Sinaloa</option>
+                                                        <option value="Sonora">Sonora</option>
+                                                        <option value="Tabasco">Tabasco</option>
+                                                        <option value="Tamaulipas">Tamaulipas</option>
+                                                        <option value="Tlaxcala">Tlaxcala</option>
+                                                        <option value="Veracruz">Veracruz</option>
+                                                        <option value="Yucatán">Yucatán</option>
+                                                        <option value="Zacatecas">Zacatecas</option>
+                                                    </select>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor selecciona el producto que desees obtener una cotización.
+                                                    </div>
+                                                </div>
+                                                <h3>Contacto</h3>
+                                                <div class="col-md-12 form-floating">
+                                                    <input type="email" class="form-control shadow-none" id="correo" name="correo" placeholder="¿Tu email?*"
+                                                        required>
+                                                    <label for="correo" class="form-label">Correo electrónico*</label>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor introduce un correo electrónico válido.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 form-floating mb-4">
+                                                    <input type="tel" class="form-control shadow-none" id="telefono" name="telefono" placeholder="Teléfono*"
+                                                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                                                    <label for="telefono" class="form-label">Teléfono*</label>
+                                                    <div class="valid-feedback">
+                                                        ¡Se ve bien!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Por favor escribe un número de teléfono válido (Ej: 6561234567).
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-end my-auto">
+                                                    <button type="submit" class="btn btn-secondary btn-block">
+                                                        <i class="fa-solid fa-paper-plane"></i> Enviar
+                                                    </button>
+                                                    <div id="hold-on-a-sec">
+                                                        <i id="contact-spinner" class="fas fa-spinner fa-spin"></i> Espera un momento por favor...
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
