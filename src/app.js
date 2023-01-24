@@ -16,10 +16,10 @@ $(function () {
 
         if (scroll >= 1) {
             header.addClass('navbar-scroll');
-            document.getElementById("logo-navbar").src="./assets/images/logo-light.svg";
+            document.getElementById("logo-navbar").src="./wp-content/themes/joca-v1/assets/images/logo-light.svg";
         } else {
             header.removeClass("navbar-scroll");
-            document.getElementById("logo-navbar").src="./assets/images/logo-dark.svg";
+            document.getElementById("logo-navbar").src="./wp-content/themes/joca-v1/assets/images/logo-dark.svg";
         }
     }
 
